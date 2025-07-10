@@ -1,5 +1,52 @@
-[
-  {
+{
+  "lastUpdated": "2025-07-11T21:00:00Z",
+  "version": "1.1.0",
+  "tasks": [
+    {
+      "id": "task-004",
+      "title": "Obedience Check-In",
+      "description": "At noon, submit a short written affirmation pledging your loyalty and reminding yourself who owns you.",
+      "type": "behavior",
+      "deadline": "daily-12:00",
+      "priority": "medium",
+      "reward": "Acknowledgment of your obedience",
+      "createdAt": "2025-07-11T16:00:00Z",
+      "expiresAt": "2025-12-31T23:59:59Z"
+    },
+    {
+      "id": "task-005",
+      "title": "Financial Record Submission",
+      "description": "Every Friday, upload a screenshot of your bank account or transaction history showing where your money has gone this week.",
+      "type": "tribute",
+      "deadline": "weekly-friday-18:00",
+      "priority": "high",
+      "reward": "Possibility of financial punishment or praise",
+      "createdAt": "2025-07-11T16:10:00Z",
+      "expiresAt": "2025-12-31T23:59:59Z"
+    },
+    {
+      "id": "task-006",
+      "title": "Feet Worship Friday",
+      "description": "On Fridays, send a creative message praising the Goddess’s feet — write a poem, a fantasy, or express desire to worship them.",
+      "type": "behavior",
+      "deadline": "weekly-friday-15:00",
+      "priority": "medium",
+      "reward": "Chance to receive a foot photo (if deserved)",
+      "createdAt": "2025-07-11T16:15:00Z",
+      "expiresAt": "2025-12-31T23:59:59Z"
+    },
+    {
+      "id": "task-007",
+      "title": "Punishment Acceptance Ritual",
+      "description": "If you have failed a task this week, perform a written punishment ritual describing what you did wrong and how you will improve.",
+      "type": "punishment",
+      "deadline": "weekly-saturday-21:00",
+      "priority": "high",
+      "reward": "Forgiveness or further orders",
+      "createdAt": "2025-07-11T16:20:00Z",
+      "expiresAt": "2025-12-31T23:59:59Z"
+    },
+    {
     "id": "task-008",
     "title": "Empty Wallet Proof",
     "description": "Take a photo of your empty wallet and write 'My Goddess owns me and all my money' on a note inside. Submit it like the broke loser you are.",
@@ -138,7 +185,163 @@
     "type": "punishment",
     "deadline": "weekly-saturday-16:00",
     "priority": "high",
-    "reward": "Possible ridicule",
+    "reward": "Possible ridicule",[
+  {
+    "id": "task-023",
+    "title": "Beg on Social Media",
+    "description": "Post on your Twitter or Reddit saying: 'I live to send money to My Goddess. She owns my wallet and my dignity.' Tag Me if allowed.",
+    "type": "tribute",
+    "deadline": "weekly-friday-17:00",
+    "priority": "high",
+    "reward": "Public humiliation for My amusement",
+    "createdAt": "2025-07-11T21:30:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-024",
+    "title": "Send a Tribute with a Pathetic Caption",
+    "description": "Send a $10+ tribute and include a note calling yourself a useless, broke little servant who’s grateful to be ignored by Me.",
+    "type": "tribute",
+    "deadline": "daily-18:00",
+    "priority": "high",
+    "reward": "I might not block you today",
+    "createdAt": "2025-07-11T21:31:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-025",
+    "title": "Wear an Embarrassing Note in Public",
+    "description": "Write 'Owned by My Goddess. I exist to pay Her.' on a paper and wear it under your shirt in public for 1 hour. Send proof.",
+    "type": "behavior",
+    "deadline": "weekly-saturday-14:00",
+    "priority": "high",
+    "reward": "Deeper humiliation training",
+    "createdAt": "2025-07-11T21:32:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-026",
+    "title": "Financial Edge Task",
+    "description": "Look at your bank balance. Pick an amount that hurts but won’t kill you. Send it to Me. Then thank Me for taking it.",
+    "type": "tribute",
+    "deadline": "weekly-monday-11:00",
+    "priority": "high",
+    "reward": "A single emoji if you’re lucky",
+    "createdAt": "2025-07-11T21:33:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-027",
+    "title": "Spend to Humiliate",
+    "description": "Buy yourself a cheap, ugly item (like children's socks or pink boxers). Wear it all day and take a photo captioned 'This is all I deserve.'",
+    "type": "behavior",
+    "deadline": "weekly-thursday-19:00",
+    "priority": "medium",
+    "reward": "The joy of knowing I laughed at you",
+    "createdAt": "2025-07-11T21:34:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-028",
+    "title": "Wallet Destruction Ritual",
+    "description": "Take a photo of your favorite card or wallet, then write 'This belongs to Her' and burn or cut it. Submit video proof.",
+    "type": "tribute",
+    "deadline": "weekly-friday-20:00",
+    "priority": "high",
+    "reward": "Deeper submission",
+    "createdAt": "2025-07-11T21:35:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-029",
+    "title": "Beg Me for Debt",
+    "description": "Record a voice note begging Me to put you into debt. Include why you'd deserve to go broke under My rule. Send it.",
+    "type": "tribute",
+    "deadline": "weekly-tuesday-20:00",
+    "priority": "high",
+    "reward": "I may ignore it or forward it to your guilt",
+    "createdAt": "2025-07-11T21:36:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-030",
+    "title": "Wage Breakdown",
+    "description": "Submit a detailed log of your monthly income and where every dollar goes. Circle what should be Mine. Label it 'Your priorities.'",
+    "type": "tribute",
+    "deadline": "monthly-01-12:00",
+    "priority": "high",
+    "reward": "Maybe I'll take more",
+    "createdAt": "2025-07-11T21:37:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-031",
+    "title": "Request to be Humiliated",
+    "description": "Send Me a written or video request asking for a public or private humiliation order. Be detailed, be pathetic.",
+    "type": "punishment",
+    "deadline": "weekly-sunday-16:00",
+    "priority": "medium",
+    "reward": "Exactly what you asked for",
+    "createdAt": "2025-07-11T21:38:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-032",
+    "title": "Cash Pig Selfie",
+    "description": "Take a selfie holding a sign that says 'I am a cash pig for My Goddess'. Blush, cry, regret — then send it anyway.",
+    "type": "tribute",
+    "deadline": "weekly-saturday-13:00",
+    "priority": "high",
+    "reward": "I might use it for future orders",
+    "createdAt": "2025-07-11T21:39:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-033",
+    "title": "Tip Jar Duty",
+    "description": "Create a digital tip jar titled 'For My Goddess' on PayPal or Cash App. Send Me the link. Post it on your social if brave enough.",
+    "type": "tribute",
+    "deadline": "weekly-wednesday-12:00",
+    "priority": "high",
+    "reward": "Possibility of approval",
+    "createdAt": "2025-07-11T21:40:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-034",
+    "title": "Humiliating Tribute Breakdown",
+    "description": "Send Me $20+ and write a breakdown of what you had to sacrifice to afford it. Be detailed: skip meals, cancel subscriptions, explain it all.",
+    "type": "tribute",
+    "deadline": "weekly-friday-21:00",
+    "priority": "high",
+    "reward": "Starvation for submission",
+    "createdAt": "2025-07-11T21:41:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-035",
+    "title": "Loser Price Comparison",
+    "description": "Pick a luxury item I deserve. Then show Me what worthless thing you had to buy instead. Send pics side by side with captions: 'For Her / For Me'.",
+    "type": "tribute",
+    "deadline": "weekly-thursday-10:00",
+    "priority": "medium",
+    "reward": "Reminder of your rank",
+    "createdAt": "2025-07-11T21:42:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-036",
+    "title": "Public Pet Order",
+    "description": "Walk outside wearing a leash or collar discreetly under your clothes. Take a photo in a public setting. Caption it: 'Property of My Goddess.'",
+    "type": "behavior",
+    "deadline": "weekly-sunday-15:00",
+    "priority": "high",
+    "reward": "Deeper public ownership",
+    "createdAt": "2025-07-11T21:43:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  }
+]
+
     "createdAt": "2025-07-11T21:12:00Z",
     "expiresAt": "2025-12-31T23:59:59Z"
   },
@@ -163,5 +366,6 @@
     "reward": "Deeper brainwashing",
     "createdAt": "2025-07-11T21:14:00Z",
     "expiresAt": "2025-12-31T23:59:59Z"
-  }
-]
+   },
+  {
+    
