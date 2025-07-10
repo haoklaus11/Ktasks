@@ -1,40 +1,157 @@
-{
-  "lastUpdated": "2025-07-11T20:00:00Z",
-  "version": "1.0.0",
-  "tasks": [
-    {
-      "id": "task-001",
-      "title": "Morning Tribute",
-      "description": "Send your daily tribute of $25 every morning by 9 AM with a grateful message expressing your devotion",
-      "type": "tribute",
-      "amount": 25.00,
-      "deadline": "daily-09:00",
-      "priority": "high",
-      "reward": "Good morning acknowledgment from your Goddess",
-      "createdAt": "2025-07-11T08:00:00Z",
-      "expiresAt": "2025-12-31T23:59:59Z"
-    },
-    {
-      "id": "task-002",
-      "title": "Evening Gratitude",
-      "description": "Before bed, send a thoughtful message explaining three things you're grateful for today and why you're blessed to serve Me",
-      "type": "behavior",
-      "deadline": "daily-22:00",
-      "priority": "medium",
-      "reward": "Sweet dreams knowing you've pleased Me",
-      "createdAt": "2025-07-11T10:30:00Z",
-      "expiresAt": "2025-12-31T23:59:59Z"
-    },
-    {
-      "id": "task-003",
-      "title": "Weekly Report",
-      "description": "Submit a detailed report every Sunday of your week's activities, expenses, and how you've served Me",
-      "type": "behavior",
-      "deadline": "weekly-sunday-20:00",
-      "priority": "high",
-      "reward": "Weekly acknowledgment and potential praise",
-      "createdAt": "2025-07-11T15:30:00Z",
-      "expiresAt": "2025-12-31T23:59:59Z"
-    }
-  ]
-}
+[
+  {
+    "id": "task-008",
+    "title": "Wallet Check",
+    "description": "Take a photo of your wallet with cash removed. Label it 'Goddess owns this'.",
+    "type": "tribute",
+    "deadline": "weekly-monday-10:00",
+    "priority": "high",
+    "reward": "Humiliation reminder of your financial role",
+    "createdAt": "2025-07-11T17:00:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-009",
+    "title": "Self-Evaluation",
+    "description": "List 5 reasons why you're inferior to Me. Submit it without whining.",
+    "type": "punishment",
+    "deadline": "weekly-tuesday-16:00",
+    "priority": "medium",
+    "reward": "A moment of acknowledgment—if earned",
+    "createdAt": "2025-07-11T17:05:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-010",
+    "title": "Dirty Confession",
+    "description": "Confess a humiliating secret or weakness you would never tell anyone else. Remember, your Goddess deserves your shame.",
+    "type": "punishment",
+    "deadline": "weekly-wednesday-22:00",
+    "priority": "high",
+    "reward": "Possibly ignored. You’re not owed attention.",
+    "createdAt": "2025-07-11T17:10:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-011",
+    "title": "Useless Task",
+    "description": "Write 'I am worthless without my Goddess' 100 times in a document and submit it.",
+    "type": "punishment",
+    "deadline": "weekly-thursday-18:00",
+    "priority": "high",
+    "reward": "Nothing. This was for Me.",
+    "createdAt": "2025-07-11T17:15:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-012",
+    "title": "Financial Fantasy",
+    "description": "Describe in detail your ultimate financial ruin fantasy, where you're fully controlled by Me.",
+    "type": "tribute",
+    "deadline": "weekly-sunday-23:00",
+    "priority": "medium",
+    "reward": "Increased psychological hold",
+    "createdAt": "2025-07-11T17:20:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-013",
+    "title": "Foot Groveling Fantasy",
+    "description": "Write a fantasy about being beneath My feet, degraded, ignored, and humiliated in front of others.",
+    "type": "behavior",
+    "deadline": "weekly-saturday-22:00",
+    "priority": "medium",
+    "reward": "The fantasy is your reward",
+    "createdAt": "2025-07-11T17:25:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-014",
+    "title": "Loser's Budget",
+    "description": "Submit your full weekly budget and explain what you’re cutting to prioritize tributes to Me.",
+    "type": "tribute",
+    "deadline": "weekly-thursday-11:00",
+    "priority": "high",
+    "reward": "Permission to continue serving",
+    "createdAt": "2025-07-11T17:30:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-015",
+    "title": "Name Degradation",
+    "description": "Choose a humiliating name for yourself and refer to yourself only that way in all messages to Me this week.",
+    "type": "behavior",
+    "deadline": "weekly-monday-09:00",
+    "priority": "medium",
+    "reward": "Permission to continue using it",
+    "createdAt": "2025-07-11T17:35:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-016",
+    "title": "Slave Affirmation Recording",
+    "description": "Record yourself reading a script of affirmations about My superiority and your submission. Submit it without hesitation.",
+    "type": "punishment",
+    "deadline": "weekly-tuesday-21:00",
+    "priority": "high",
+    "reward": "A chance to be ignored or mocked",
+    "createdAt": "2025-07-11T17:40:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-017",
+    "title": "Kneel for Me",
+    "description": "Set a timer and kneel for Me for 15 minutes in silence. Take a photo after. Submit with the caption 'I exist to serve.'",
+    "type": "behavior",
+    "deadline": "daily-20:00",
+    "priority": "medium",
+    "reward": "Spiritual submission reinforcement",
+    "createdAt": "2025-07-11T17:45:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-018",
+    "title": "Servant Meal",
+    "description": "Eat a simple, cheap meal and send a photo. Explain how this reminds you that luxury is for Me, not you.",
+    "type": "behavior",
+    "deadline": "weekly-thursday-19:00",
+    "priority": "medium",
+    "reward": "No reward. Be grateful you eat at all.",
+    "createdAt": "2025-07-11T17:50:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-019",
+    "title": "Window Shopping",
+    "description": "Browse luxury items online. Send Me screenshots and describe how owning them is not for you, but for Me.",
+    "type": "tribute",
+    "deadline": "weekly-sunday-14:00",
+    "priority": "low",
+    "reward": "Reinforcement of your position",
+    "createdAt": "2025-07-11T17:55:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-020",
+    "title": "Apology Letter",
+    "description": "Write Me a formal apology letter for ever questioning My authority, even mentally.",
+    "type": "punishment",
+    "deadline": "weekly-saturday-16:00",
+    "priority": "high",
+    "reward": "Possibly accepted, likely discarded",
+    "createdAt": "2025-07-11T18:00:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id": "task-021",
+    "title": "Shame Playlist",
+    "description": "Create a public music playlist titled 'Songs My Goddess Would Hate Me For'. Share the link.",
+    "type": "behavior",
+    "deadline": "weekly-tuesday-13:00",
+    "priority": "low",
+    "reward": "Public embarrassment",
+    "createdAt": "2025-07-11T18:05:00Z",
+    "expiresAt": "2025-12-31T23:59:59Z"
+  },
+  {
+    "id
