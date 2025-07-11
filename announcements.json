@@ -1,0 +1,23 @@
+{
+  "lastUpdated": "2025-07-11T20:00:00Z",
+  "announcements": [
+    {
+      "id": "ann-001",
+      "title": "Welcome to My Domain",
+      "message": "Welcome to My digital domain. Your obedience and dedication will be monitored and rewarded accordingly. Remember: I am always watching, always evaluating. Make Me proud.",
+      "type": "welcome",
+      "priority": "high",
+      "createdAt": "2025-07-11T20:00:00Z",
+      "expiresAt": "2025-12-31T23:59:59Z"
+    },
+    {
+      "id": "ann-002",
+      "title": "New Rules in Effect",
+      "message": "From now on, all tributes must include a screenshot of the transaction and a message of gratitude. Failure to comply will result in punishment tasks. You have been warned.",
+      "type": "rule",
+      "priority": "urgent",
+      "createdAt": "2025-07-11T20:00:00Z",
+      "expiresAt": "2025-12-31T23:59:59Z"
+    }
+  ]
+}

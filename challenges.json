@@ -1,0 +1,27 @@
+{
+  "lastUpdated": "2025-07-11T20:00:00Z",
+  "challenges": [
+    {
+      "id": "challenge-001",
+      "title": "Perfect Week Challenge",
+      "description": "Complete all daily tasks for 7 consecutive days without a single failure. Show Me your dedication and consistency.",
+      "type": "challenge",
+      "duration": "7-days",
+      "priority": "high",
+      "reward": "Exclusive content and personal recognition",
+      "createdAt": "2025-07-11T20:00:00Z",
+      "expiresAt": "2025-07-25T23:59:59Z"
+    },
+    {
+      "id": "challenge-002",
+      "title": "Tribute Devotion Challenge",
+      "description": "Double your usual tribute amount for one week. Prove your financial devotion deserves My attention.",
+      "type": "tribute-challenge",
+      "duration": "7-days",
+      "priority": "urgent",
+      "reward": "Special attention and custom content",
+      "createdAt": "2025-07-11T20:00:00Z",
+      "expiresAt": "2025-07-25T23:59:59Z"
+    }
+  ]
+}
