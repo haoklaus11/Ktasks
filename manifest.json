@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "FinDom Task Tracker",
+  "version": "1.0.0",
+  "description": "A consensual task tracking and goal setting extension for financial domination relationships",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "FinDom Task Tracker"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "author": "FinDom Task Tracker Team",
+  "homepage_url": "https://github.com/findom-task-tracker"
+}

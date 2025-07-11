@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinDom Task Tracker</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header particle-bg">
+            <h1 class="title floating-element" id="dashboard-title">👑 Obedience Terminal ⚡</h1>
+            <div class="status-indicator" id="status-indicator">
+                <span class="status-dot glow"></span>
+                <span id="status-text">Terminal Activated</span>
+            </div>
+        </header>
+
+        <!-- Consent Notice (shown first time) -->
+        <div class="consent-notice" id="consent-notice">
+            <div class="consent-content">
+                <h2>👑 Welcome, Worm.</h2>
+                <p><strong>By entering this domain, you accept complete submission to My control.</strong></p>
+                <div class="consent-terms">
+                    <p>📜 <strong>You acknowledge:</strong></p>
+                    <ul>
+                        <li>🔒 You exist to serve, obey, and pay</li>
+                        <li>⚖️ All tasks and tributes are non-negotiable once accepted</li>
+                        <li>🛡️ Your data remains on your device - I don't need it elsewhere</li>
+                        <li>🚪 You may exit at any time, though I doubt your weak will can handle the silence</li>
+                        <li>👑 Your time, money, and attention now belong to Me</li>
+                    </ul>
+                </div>
+                <div class="consent-buttons">
+                    <button id="accept-consent" class="btn btn-primary">✅ I consent to submit</button>
+                    <button id="decline-consent" class="btn btn-secondary">❌ I refuse and retreat</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div id="main-content" style="display: none;">
+            <!-- User Profile Stats -->
+            <div class="user-profile-section">
+                <div class="profile-header">
+                    <div class="profile-main">
+                        <div class="rank-status">Current Status: <span class="level-badge" id="user-level">Unimpressive Paypig</span></div>
+                        <div class="points-display">
+                            <span id="submission-points">0</span> Obedience Points
+                        </div>
+                    </div>
+                </div>
+                <div class="level-progress-bar">
+                    <div class="level-progress-fill" id="level-progress"></div>
+                </div>
+                <div class="profile-stats">
+                    <span>🏆 <span id="achievement-count">0</span> achievements earned</span>
+                    <span>⚠️ <span id="user-penalties">0</span> punishments served</span>
+                    <div class="sync-status" id="sync-status">
+                        <span class="sync-indicator" id="sync-indicator">🔄</span>
+                        <span id="sync-text">Ready</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goddess Messages -->
+            <div class="goddess-messages-section">
+                <h3 class="section-title text-gradient">⚡ Commands from Your Superior</h3>
+                <div class="goddess-messages" id="goddess-messages">
+                    <div class="default-message">
+                        <p>Awaiting your next opportunity to disappoint Me...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="tasks-completed">0</div>
+                    <div class="stat-label">Tasks Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="current-streak">0</div>
+                    <div class="stat-label">Obedience Streak</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="goals-met">0</div>
+                    <div class="stat-label">Tributes Paid</div>
+                </div>
+            </div>
+
+            <!-- Daily Check-in -->
+            <section class="section">
+                <h2 class="section-title text-gradient">📅 Daily Submission Report</h2>
+                <div class="checkin-status" id="checkin-status">
+                    <div class="checkin-card">
+                        <div class="checkin-icon">⚡</div>
+                        <div class="checkin-text">
+                            <div id="checkin-message">Report for duty, worm</div>
+                            <div class="checkin-meta" id="checkin-meta">Your compliance is overdue</div>
+                        </div>
+                        <button id="daily-check-in-btn" class="btn btn-primary">Report In</button>
+                    </div>
+                </div>
+                
+                <!-- Proof Submission Area -->
+                <div class="proof-submission" id="proof-submission" style="display: none;">
+                    <h3 class="text-gradient">Submit Proof of Compliance</h3>
+                    <div class="proof-upload-area">
+                        <input type="file" id="proof-file" accept="image/*" style="display: none;">
+                        <input type="url" id="proof-link" placeholder="Or paste a link/URL..." class="form-input">
+                        <div class="proof-buttons">
+                            <button id="upload-proof-btn" class="btn btn-outline">📷 Upload Photo</button>
+                            <button id="submit-proof-btn" class="btn btn-primary">Submit Proof</button>
+                        </div>
+                    </div>
+                    <div id="proof-preview" class="proof-preview"></div>
+                </div>
+            </section>
+
+            <!-- Today's Tasks -->
+            <section class="section">
+                <h2 class="section-title text-gradient">⚡ Your Assignments</h2>
+                <div class="task-instructions">
+                    <p>What will you do today: <strong>Serve</strong>... or <strong>disappoint</strong>?</p>
+                </div>
+                <div class="task-list" id="task-list">
+                    <div class="empty-state">
+                        <span class="empty-icon">📝</span>
+                        <p>No assignments yet. How... empty your existence must be.</p>
+                        <button id="add-task-btn" class="btn btn-outline">Accept Your First Task</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Goals Progress -->
+            <section class="section">
+                <h2 class="section-title text-gradient">🎯 Current Goals & Challenges</h2>
+                <div class="goals-list" id="goals-list">
+                    <div class="empty-state">
+                        <span class="empty-icon">🎯</span>
+                        <p>No active goals</p>
+                        <button id="add-goal-btn" class="btn btn-outline">Set Goal</button>
+                    </div>
+                </div>
+                
+                <!-- Challenge Mode Container -->
+                <div class="challenges-container" id="challenge-container">
+                    <!-- Dynamic challenges will be inserted here -->
+                </div>
+            </section>
+
+            <!-- Reward/Punishment System -->
+            <section class="section">
+                <h2 class="section-title text-gradient">✨ Feedback & Rewards</h2>
+                <div class="feedback-system" id="feedback-system">
+                    <div class="feedback-card" id="last-feedback" style="display: none;">
+                        <div class="feedback-icon">✨</div>
+                        <div class="feedback-text" id="feedback-text">Great job on completing your tasks!</div>
+                    </div>
+                    <div class="punishment-warning" id="punishment-warning" style="display: none;">
+                        <div class="warning-icon">⚠️</div>
+                        <div class="warning-text" id="warning-text">You have overdue tasks</div>
+                        <button id="redeem-btn" class="btn btn-secondary">Complete Redemption Task</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Obedience Journal -->
+            <section class="section">
+                <h2 class="section-title text-gradient">📔 Obedience Journal</h2>
+                <div class="journal-preview" id="journal-preview">
+                    <div class="journal-entry" id="last-journal-entry" style="display: none;">
+                        <div class="journal-date"></div>
+                        <div class="journal-content"></div>
+                    </div>
+                    <button id="add-journal-btn" class="btn btn-outline">Add Journal Entry</button>
+                </div>
+            </section>
+
+            <!-- Public Praise/Shame Board -->
+            <section class="section" id="praise-board-section" style="display: none;">
+                <h2 class="section-title text-gradient">🏆 Community Board</h2>
+                <div class="praise-board" id="praise-board">
+                    <div class="board-toggle">
+                        <button id="praise-board-toggle" class="btn btn-outline">Show/Hide Board</button>
+                    </div>
+                    <div class="praise-board-content">
+                        <div class="board-notice">
+                            <p>📢 Anonymous community recognition board</p>
+                            <small>All entries use pseudonyms for privacy</small>
+                        </div>
+                        <div class="praise-board-items" id="praise-board-items">
+                            <!-- Praise/Shame entries will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Safety & Consent -->
+            <section class="section">
+                <h2 class="section-title text-gradient">🛡️ Safety Controls</h2>
+                <div class="safety-controls">
+                    <div class="safeword-section">
+                        <p class="safety-notice">Your safety and consent are paramount</p>
+                        <button id="safeword-btn" class="btn btn-warning">🚨 Safeword / Pause</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <button id="tribute-btn" class="btn btn-primary glow-gold">� Send Tribute</button>
+                <button id="view-history" class="btn btn-outline">📊 History</button>
+                <button id="settings-btn" class="btn btn-outline">⚙️ Settings</button>
+                <button id="sync-btn" class="btn btn-outline">🔄 Sync Tasks</button>
+            </div>
+
+            <!-- Goddess Links -->
+            <div class="goddess-links glow-pink">
+                <h3 class="floating-element">💜 Connect with Goddess Karo 💜</h3>
+                <div class="links-grid">
+                    <button id="throne-link" class="link-btn throne-btn glow-gold">👑 Send Tribute</button>
+                    <button id="linktree-link" class="link-btn linktree-btn">🌐 All Links</button>
+                </div>
+                
+                <!-- Social Media Buttons -->
+                <div class="social-media-section">
+                    <h4 class="social-title">Follow & Worship</h4>
+                    <div class="social-buttons">
+                        <button id="twitter-link" class="social-btn twitter-btn">
+                            <span class="social-icon">🐦</span>
+                            <span class="social-text">X (Twitter)</span>
+                        </button>
+                        <button id="loyalfans-link" class="social-btn loyalfans-btn">
+                            <span class="social-icon">�</span>
+                            <span class="social-text">LoyalFans</span>
+                        </button>
+                        <button id="onlyfans-link" class="social-btn onlyfans-btn">
+                            <span class="social-icon">💋</span>
+                            <span class="social-text">OnlyFans</span>
+                        </button>
+                        <button id="discord-link" class="social-btn discord-btn">
+                            <span class="social-icon">💬</span>
+                            <span class="social-text">Discord</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="additional-links" id="additional-links">
+                    <!-- Additional links will be populated here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Panel -->
+        <div class="settings-panel" id="settings-panel" style="display: none;">
+            <h2>⚙️ Settings</h2>
+            <div class="setting-group">
+                <label class="setting-item">
+                    <span>Enable Notifications</span>
+                    <input type="checkbox" id="notifications-toggle">
+                </label>
+                <label class="setting-item">
+                    <span>Daily Reminder Time</span>
+                    <input type="time" id="reminder-time" value="09:00">
+                </label>
+                <label class="setting-item">
+                    <span>Privacy Mode</span>
+                    <input type="checkbox" id="privacy-mode">
+                </label>
+                <label class="setting-item">
+                    <span>Challenge Mode</span>
+                    <input type="checkbox" id="challenge-mode">
+                </label>
+                <label class="setting-item">
+                    <span>Tribute Reminders</span>
+                    <input type="checkbox" id="tribute-reminders">
+                </label>
+                <label class="setting-item">
+                    <span>Require Proof Submission</span>
+                    <input type="checkbox" id="proof-required">
+                </label>
+                <label class="setting-item">
+                    <span>Public Praise Board</span>
+                    <input type="checkbox" id="public-praise">
+                </label>
+                <label class="setting-item">
+                    <span>Voice Feedback</span>
+                    <input type="checkbox" id="voice-feedback">
+                </label>
+                <label class="setting-item">
+                    <span>Dashboard Title</span>
+                    <select id="dashboard-title-select">
+                        <option value="The Throne Room">The Throne Room</option>
+                        <option value="Paypig Control Center">Paypig Control Center</option>
+                        <option value="Obedience Terminal">Obedience Terminal</option>
+                        <option value="Goddess Command Center">Goddess Command Center</option>
+                        <option value="Submission Portal">Submission Portal</option>
+                    </select>
+                </label>
+                <label class="setting-item">
+                    <span>Goddess Name</span>
+                    <input type="text" id="goddess-name" placeholder="Enter Goddess name">
+                </label>
+            </div>
+            <div class="setting-actions">
+                <button id="manual-sync" class="btn btn-outline">🔄 Sync Tasks</button>
+                <button id="export-data" class="btn btn-outline">Export Data</button>
+                <button id="clear-data" class="btn btn-danger">Clear All Data</button>
+                <button id="close-settings" class="btn btn-secondary">Close</button>
+            </div>
+        </div>
+        </div> <!-- End main-content -->
+
+        <!-- Task/Goal Form Modal -->
+        <div class="modal" id="task-modal" style="display: none;">
+            <div class="modal-content">
+                <h3 id="modal-title">Add New Task</h3>
+                <form id="task-form">
+                    <div class="form-group">
+                        <label for="task-title">Title</label>
+                        <input type="text" id="task-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-description">Description</label>
+                        <textarea id="task-description" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-type">Type</label>
+                        <select id="task-type">
+                            <option value="daily">Daily Task</option>
+                            <option value="tribute">Tribute Goal</option>
+                            <option value="behavior">Behavior Task</option>
+                            <option value="obedience">Obedience Challenge</option>
+                            <option value="punishment">Redemption Task</option>
+                            <option value="challenge">Special Challenge</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="amount-group" style="display: none;">
+                        <label for="task-amount">Amount ($)</label>
+                        <input type="number" id="task-amount" min="0" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label for="task-deadline">Deadline</label>
+                        <input type="datetime-local" id="task-deadline">
+                    </div>
+                    <div class="form-group">
+                        <label for="task-priority">Priority</label>
+                        <select id="task-priority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                            <option value="urgent">Urgent</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-reward">Reward for Completion</label>
+                        <input type="text" id="task-reward" placeholder="e.g., Special content, praise">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" id="cancel-task" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Safeword Modal -->
+    <div class="modal" id="safeword-modal" style="display: none;">
+        <div class="modal-content safeword-modal">
+            <h3>🚨 Emergency Exit</h3>
+            <div class="safeword-notice">
+                Your safety and consent are paramount. Choose your path carefully.
+            </div>
+            <div class="safeword-options">
+                <div class="safeword-option">
+                    <h4>⏸️ Pause Activities</h4>
+                    <p>Temporarily suspend all tasks and tributes. You will be demoted and required to explain your weakness if you return.</p>
+                    <select id="pause-duration">
+                        <option value="1">1 hour</option>
+                        <option value="6">6 hours</option>
+                        <option value="24">24 hours</option>
+                        <option value="168">1 week</option>
+                    </select>
+                    <button id="pause-activities-btn" class="btn btn-warning">Pause Activities</button>
+                </div>
+                <div class="safeword-option">
+                    <h4>🛑 Emergency Stop</h4>
+                    <p>Completely disable all functionality. You will need to restart with fresh consent.</p>
+                    <button id="emergency-stop-btn" class="btn btn-danger">Emergency Stop</button>
+                </div>
+                <div class="safeword-option">
+                    <h4>🆘 Mental Health Resources</h4>
+                    <p>Access support and counseling resources if needed.</p>
+                    <button id="mental-health-btn" class="btn btn-secondary">Get Help</button>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button id="cancel-safeword" class="btn btn-secondary">Cancel - Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="extension-footer">
+        <div class="footer-content">
+            <div class="footer-branding">
+                <span class="footer-title">👑 Goddess Dominion</span>
+                <span class="footer-subtitle">Consensual Power Exchange</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://throne.com/goddesskaro" target="_blank" class="footer-link">
+                    <span class="footer-icon">🎁</span>
+                    <span>Throne</span>
+                </a>
+                <a href="https://linktr.ee/KGoddessxo" target="_blank" class="footer-link">
+                    <span class="footer-icon">🔗</span>
+                    <span>Links</span>
+                </a>
+            </div>
+            <div class="footer-status">
+                <span class="status-indicator">
+                    <span class="status-dot active"></span>
+                    <span class="status-text">Extension Active</span>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="popup.js"></script>
+    <script src="popup-buttons.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "lastUpdated": "2025-07-11T15:30:00Z",
+  "announcements": [
+    {
+      "id": "ann-001",
+      "title": "Weekly Challenge",
+      "message": "This week's challenge: Complete all tasks without a single failure. Reward: Special content and personal attention.",
+      "type": "challenge",
+      "priority": "urgent",
+      "createdAt": "2025-07-11T10:30:00Z",
+      "expiresAt": "2025-07-18T23:59:59Z"
+    },
+    {
+      "id": "ann-002",
+      "title": "New Rules",
+      "message": "From now on, all tributes must include a photo of the transaction. Failure to comply will result in punishment tasks.",
+      "type": "rule",
+      "priority": "high",
+      "createdAt": "2025-07-11T15:30:00Z"
+    }
+  ]
+}

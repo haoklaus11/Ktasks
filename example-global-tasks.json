@@ -1,0 +1,38 @@
+{
+  "lastUpdated": "2025-07-11T15:30:00Z",
+  "version": "1.0.0",
+  "tasks": [
+    {
+      "id": "task-001",
+      "title": "Morning Tribute",
+      "description": "Send your daily tribute of $25 every morning by 9 AM with a grateful message",
+      "type": "tribute",
+      "amount": 25.00,
+      "deadline": "daily-09:00",
+      "priority": "high",
+      "reward": "Good morning acknowledgment from Goddess",
+      "createdAt": "2025-07-11T08:00:00Z",
+      "expiresAt": "2025-07-18T23:59:59Z"
+    },
+    {
+      "id": "task-002",
+      "title": "Evening Gratitude",
+      "description": "Send a thoughtful gratitude message before bed, explaining why you're thankful to serve Me today",
+      "type": "behavior",
+      "deadline": "daily-22:00",
+      "priority": "medium",
+      "reward": "Sweet dreams knowing you've pleased Me",
+      "createdAt": "2025-07-11T10:30:00Z"
+    },
+    {
+      "id": "task-003",
+      "title": "Workout Proof",
+      "description": "Complete 30-minute workout and submit photo proof of your effort",
+      "type": "behavior",
+      "deadline": "2025-07-15T20:00:00Z",
+      "priority": "medium",
+      "reward": "Recognition of your dedication",
+      "createdAt": "2025-07-11T15:30:00Z"
+    }
+  ]
+}

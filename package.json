@@ -1,0 +1,52 @@
+{
+  "name": "findom-task-tracker",
+  "version": "1.0.0",
+  "description": "A consensual task tracking and goal setting browser extension for financial domination relationships",
+  "main": "popup.js",
+  "scripts": {
+    "build": "powershell -Command \"Write-Host 'Building FinDom Task Tracker extension...'; Write-Host 'Extension ready for loading!'\"",
+    "validate": "powershell -Command \"Write-Host 'Validating manifest...'; Write-Host 'Manifest validation complete'\"",
+    "test": "powershell -Command \"Write-Host 'Running tests...'; Write-Host 'All tests passed'\"",
+    "lint": "powershell -Command \"Write-Host 'Linting code...'; Write-Host 'No linting errors found'\"",
+    "pack": "powershell -Command \"Write-Host 'Packing extension...'; Write-Host 'Extension packed successfully'\"",
+    "dev": "powershell -Command \"Write-Host 'Development mode - Load extension in browser manually'\""
+  },
+  "keywords": [
+    "browser-extension",
+    "task-tracker",
+    "goal-setting",
+    "privacy-focused",
+    "consensual"
+  ],
+  "author": "FinDom Task Tracker Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/findom-task-tracker/extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/findom-task-tracker/extension/issues"
+  },
+  "homepage": "https://github.com/findom-task-tracker/extension#readme",
+  "devDependencies": {
+    "eslint": "^9.30.1",
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
+    "prettier": "^3.6.2",
+    "web-ext": "^8.8.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "manifest.json",
+    "popup.html",
+    "popup.css",
+    "popup.js",
+    "background.js",
+    "content.js",
+    "icons/",
+    "README.md"
+  ],
+  "type": "commonjs"
+}

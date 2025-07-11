@@ -1,0 +1,51 @@
+{
+  "lastUpdated": "2024-12-27T19:00:00Z",
+  "tasks": [
+    {
+      "id": "daily-001",
+      "title": "Morning Tribute Check",
+      "description": "Start your day by checking your tribute balance. If it's below $50, add $20 immediately.",
+      "category": "financial",
+      "difficulty": "easy",
+      "points": 10,
+      "timeLimit": 30,
+      "recurring": true,
+      "recurringType": "daily",
+      "recurringTime": "08:00",
+      "proofRequired": true,
+      "proofType": "screenshot",
+      "instructions": "Take a screenshot of your account balance and tribute amount added.",
+      "active": true
+    },
+    {
+      "id": "daily-002",
+      "title": "Evening Reflection",
+      "description": "Write a brief reflection on how you served today. What could you have done better?",
+      "category": "personal",
+      "difficulty": "easy",
+      "points": 15,
+      "timeLimit": 15,
+      "recurring": true,
+      "recurringType": "daily",
+      "recurringTime": "21:00",
+      "proofRequired": true,
+      "proofType": "text",
+      "instructions": "Write at least 3 sentences about your service today.",
+      "active": true
+    },
+    {
+      "id": "daily-003",
+      "title": "Midday Devotion",
+      "description": "Take a 5-minute break to meditate on your purpose and dedication.",
+      "category": "personal",
+      "difficulty": "easy",
+      "points": 5,
+      "timeLimit": 5,
+      "recurring": true,
+      "recurringType": "daily",
+      "recurringTime": "12:00",
+      "proofRequired": false,
+      "active": true
+    }
+  ]
+}
